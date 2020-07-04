@@ -1,9 +1,16 @@
 package com.cb.farmerapp.farmer.model;
 
 public class Farmer {
+
+
+  public Farmer(String farmerName, String idNo) {
+    this.farmerName = farmerName;
+    this.idNo = idNo;
+  }
+
   private int Id;
   private String farmerName;
-  private  String msisdn;
+  private String msisdn;
   private String idNo;
   private String location;
   private String speciality;
