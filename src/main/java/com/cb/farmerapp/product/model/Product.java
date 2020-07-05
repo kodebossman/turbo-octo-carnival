@@ -1,17 +1,17 @@
 package com.cb.farmerapp.product.model;
 
 public class Product {
-    private int Id;
-    private String productName;
+    private Long Id;
+  private String productName;
     private  String msisdn;
     private String idNo;
     private String customer;
     private String season;
     private String color;
 
-    public int getId() {
-        return Id;
-    }
+  public Long getId() {
+    return Id;
+  }
 
     public String getProductName() {
         return productName;
@@ -37,9 +37,9 @@ public class Product {
         return color;
     }
 
-    public void setId(int id) {
-        Id = id;
-    }
+  public void setId(Long id) {
+    Id = id;
+  }
 
     public void setFarmerName(String productName) {
         this.productName = productName;
