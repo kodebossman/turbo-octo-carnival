@@ -5,13 +5,16 @@ import lombok.Setter;
 @Getter @Setter
 @Data
 public class Product {
-    private int Id;
-    private char productName;
-    private  char msisdn;
-    private char idNo;
-    private char customer;
-    private char season;
-    private char color;
+Long Id;
+  private String productName;
+    private  String msisdn;
+    private String idNo;
+    private String customer;
+    private String season;
+    private String color;
+
+ 
+
 
 
 }
