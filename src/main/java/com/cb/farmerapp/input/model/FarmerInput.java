@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Entity
 public class FarmerInput {
 
-
   @Id
   private Long Id;
   @Column(name = "input_name", length = 50, nullable = false)

@@ -1,5 +1,6 @@
 package com.cb.farmerapp.farmer.model;
 
+import com.cb.farmerapp.districts.District;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,7 +33,7 @@ public class Farmer {
   @Temporal(value = TemporalType.TIMESTAMP)
   @JsonFormat(pattern = "MM/dd/yyyy")
   private LocalDate dOB;
-
-
+  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  private District district;
 
 }
