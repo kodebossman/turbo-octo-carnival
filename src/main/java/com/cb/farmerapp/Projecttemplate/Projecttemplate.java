@@ -1,5 +1,4 @@
-package com.cb.farmerapp.model.Projecttemplate;
-
+package com.cb.farmerapp.Projecttemplate;
 import java.util.Date;
 
 public class Projecttemplate {
@@ -10,7 +9,7 @@ public class Projecttemplate {
 
     public Projecttemplate(String projectObjective, Date projectDatestarted, int projectBudgetedResources, String projectCustomer) {
         ProjectObjective = projectObjective;
-        ProjectDatestarted = projectDatestarted;
+        ProjectDatestarted =projectDatestarted;
         ProjectBudgetedResources = projectBudgetedResources;
         ProjectCustomer = projectCustomer;
     }
