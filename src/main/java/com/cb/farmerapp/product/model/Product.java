@@ -2,7 +2,7 @@ package com.cb.farmerapp.product.model;
 
 public class Product {
     private Long Id;
-  private String productName;
+    private String productName;
     private  String msisdn;
     private String idNo;
     private String customer;
