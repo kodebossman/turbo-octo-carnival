@@ -1,12 +1,15 @@
 package com.cb.farmerapp.project;
-
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import com.cb.farmerapp.farmer.model.Farmer;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
+ @Entity
+ @Service
 public class Project {
-
+  @Id
   private Long Id;
   private String projectName;
   private String description;
