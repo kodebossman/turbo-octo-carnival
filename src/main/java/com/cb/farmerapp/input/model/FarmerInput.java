@@ -5,7 +5,9 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -13,6 +15,8 @@ import javax.persistence.*;
 @Table(name = "farmerInput")
 @Entity
 public class FarmerInput {
+
+
   @Id
   private Long Id;
   @Column(name = "input_name", length = 50, nullable = false)

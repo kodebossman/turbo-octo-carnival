@@ -8,6 +8,4 @@ public enum ActivityCategories {
   SELLING,
   MARKETING,
   PLANTING
-
-
 }
