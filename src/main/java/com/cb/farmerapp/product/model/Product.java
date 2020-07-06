@@ -1,5 +1,6 @@
 package com.cb.farmerapp.product.model;
-import lombok;
+import lombok.Getter;
+import lombok.Setter;
 @Getter @Setter
 public class Product {
     private int Id;
