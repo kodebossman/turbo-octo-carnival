@@ -1,86 +1,35 @@
 package com.cb.farmerapp.input.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.*;
+
+@Getter
+@Setter
+@ToString
+@Table(name = "farmerInput")
+@Entity
 public class FarmerInput {
+  @Id
   private Long Id;
+  @Column(name = "input_name", length = 50, nullable = false)
   private String inputName;
+  @Column(name = "description", length = 300, nullable = false)
   private String description;
+  @Column(name = "input_quantity", length = 50, nullable = false)
   private String quantity;
+  @Column(name = "input_weight", length = 50, nullable = false)
   private String weight;
+  @Column(name = "input_brand", length = 50, nullable = false)
   private String brand;
+  @Column(name = "input_cost", length = 50, nullable = false)
   private String cost;
+  @Column(name = "input_type", length = 50, nullable = false)
   private String inputType;
+  @Column(name = "input_supplier", length = 50, nullable = false)
   private String supplier;
-
-  public Long getId() {
-    return Id;
-  }
-
-  public void setId(Long id) {
-    Id = id;
-  }
-
-  public String getInputName() {
-    return inputName;
-  }
-
-  public void setInputName(String inputName) {
-    this.inputName = inputName;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getQuantity() {
-    return quantity;
-  }
-
-  public void setQuantity(String quantity) {
-    this.quantity = quantity;
-  }
-
-  public String getWeight() {
-    return weight;
-  }
-
-  public void setWeight(String weight) {
-    this.weight = weight;
-  }
-
-  public String getBrand() {
-    return brand;
-  }
-
-  public void setBrand(String brand) {
-    this.brand = brand;
-  }
-
-  public String getCost() {
-    return cost;
-  }
-
-  public void setCost(String cost) {
-    this.cost = cost;
-  }
-
-  public String getInputType() {
-    return inputType;
-  }
-
-  public void setInputType(String inputType) {
-    this.inputType = inputType;
-  }
-
-  public String getSupplier() {
-    return supplier;
-  }
-
-  public void setSupplier(String supplier) {
-    this.supplier = supplier;
-  }
 
 }
