@@ -1,69 +1,60 @@
 package com.cb.farmerapp.product.model;
 
 public class Product {
-    private int Id;
-    private String productName;
-    private  String msisdn;
-    private String idNo;
-    private String customer;
-    private String season;
-    private String color;
 
-    public int getId() {
-        return Id;
-    }
 
-    public String getProductName() {
-        return productName;
-    }
 
-    public String getMsisdn() {
-        return msisdn;
-    }
+        public Product(String productName, String serialNo) {
+            this.productName = productName;
+            this.serialNo = serialNo;
+        }
 
-    public String getIdNo() {
-        return idNo;
-    }
+        private String productName;
+        private String serialNo;
+        private String season;
+        private String color;
+        private String customer;
 
-    public String getCustomer() {
-        return customer;
-    }
 
-    public String getSeason() {
-        return season;
-    }
+        public String getProductName() {
+            return productName;
+        }
 
-    public String getColor() {
-        return color;
-    }
+        public String getSerialNo() {
+            return serialNo;
+        }
 
-    public void setId(int id) {
-        Id = id;
-    }
+        public String getSeason() {
+            return season;
+        }
 
-    public void setFarmerName(String productName) {
-        this.productName = productName;
-    }
+        public String getColor() {
+            return color;
+        }
 
-    public void setMsisdn(String msisdn) {
-        this.msisdn = msisdn;
-    }
+        public String getCustomer() {
+            return customer;
+        }
 
-    public void setIdNo(String idNo) {
-        this.idNo = idNo;
-    }
+        public void setSerialNo(String serialNo) {
+            this.serialNo = serialNo;
+        }
 
-    public void setCustomer(String customer) {
-        this.customer = customer;
-    }
+        public void setProductName(String productName) {
+            this.productName = productName;
+        }
 
-    public void setSpeciality(String speciality) {
-        this.season = speciality;
-    }
+        public void setSeason(String season) {
+            this.season = season;
+        }
 
-    public void setColor(String color) {
-        this.color = color;
+        public void setColor(String color) {
+            this.color = color;
+        }
+
+        public void setCustomer(String customer) {
+            this.customer = customer;
+        }
     }
-}
 
 
