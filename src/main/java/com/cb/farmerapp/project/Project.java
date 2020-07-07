@@ -1,24 +1,39 @@
 package com.cb.farmerapp.project;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import com.cb.farmerapp.farmer.model.Farmer;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
  @Entity
  @Service
+ @Getter @Setter
+
 public class Project {
   @Id
+  @Column(name = "projectId", length = 50, nullable = false,unique = true)
   private Long Id;
+   @Column(name = "projectName", length = 50, nullable = false)
   private String projectName;
+   @Column(name = "projectDescription", length = 50, nullable = false)
   private String description;
+   @Column(name = "projectBudget", length = 50, nullable = false)
   private Double projectBudget;
+   @Column(name = "projectStartDate", length = 50, nullable = false)
   private LocalDate startDate;
+   @Column(name = "projectOwner", length = 50, nullable = false)
   private String Owner;
+   @Column(name = "projectManager", length = 50, nullable = false)
   private String projectManager;
+   @Column(name = "projectLocation", length = 50, nullable = false)
   private String projectLocation;
+   @Column(name = "projectSponsor", length = 50, nullable = false)
   private String sponsor;
+   @Column(name = "projectFarmer", length = 50, nullable = false)
   private Farmer farmer;
 
   public Project(Long id, String projectName, String description, Double projectBudget, LocalDate startDate, String owner,
@@ -40,75 +55,4 @@ public class Project {
 
   }
 
-  public Long getId() {
-    return Id;
-  }
-
-  public void setId(Long id) {
-    Id = id;
-  }
-
-  public String getProjectName() {
-    return projectName;
-  }
-
-  public void setProjectName(String projectName) {
-    this.projectName = projectName;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public Double getProjectBudget() {
-    return projectBudget;
-  }
-
-  public void setProjectBudget(Double projectBudget) {
-    this.projectBudget = projectBudget;
-  }
-
-  public LocalDate getStartDate() {
-    return startDate;
-  }
-
-  public void setStartDate(LocalDate startDate) {
-    this.startDate = startDate;
-  }
-
-  public String getOwner() {
-    return Owner;
-  }
-
-  public void setOwner(String owner) {
-    Owner = owner;
-  }
-
-  public String getProjectManager() {
-    return projectManager;
-  }
-
-  public void setProjectManager(String projectManager) {
-    this.projectManager = projectManager;
-  }
-
-  public String getProjectLocation() {
-    return projectLocation;
-  }
-
-  public void setProjectLocation(String projectLocation) {
-    this.projectLocation = projectLocation;
-  }
-
-  public String getSponsor() {
-    return sponsor;
-  }
-
-  public void setSponsor(String sponsor) {
-    this.sponsor = sponsor;
-  }
 }
