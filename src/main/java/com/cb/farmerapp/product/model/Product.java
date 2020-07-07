@@ -8,6 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "product")
+
 @ToString
 @Access(AccessType.FIELD)
 @Getter
@@ -18,8 +19,8 @@ public class Product {
   private Long Id;
   @Column(name = "product_name", length = 50, nullable = false)
   private String productName;
-  @Column(name = "product_Id", length = 50, nullable = false)
-  private String product_Id;
+  @Column(name = "serialNo", length = 50, nullable = false)
+  private String serialNo;
   @Column(name = "season", length = 50, nullable = false)
   private String season;
   @Column(name = "color", length = 50, nullable = false)
@@ -34,6 +35,6 @@ public class Product {
 
 
 
-}
+
 
 
