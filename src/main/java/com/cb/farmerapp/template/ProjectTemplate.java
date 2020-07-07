@@ -1,26 +1,36 @@
 package com.cb.farmerapp.template;
 
-import lombok.Data;
+import com.cb.farmerapp.input.model.FarmerInput;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import lombok.ToString;
+
 import javax.persistence.*;
-import java.util.Date;
+
 @Entity
-@Table(name = "template")
+@Table(name = "project", indexes = {@Index(name = "indx_farmers", columnList = "msisdn", unique = true)})
+@ToString
+@Access(AccessType.FIELD)
 @Getter
 @Setter
-@Data
 public class ProjectTemplate {
-  @Id
+
+  @javax.persistence.Id
   private Long Id;
-  @Column (name = "Project_objective",length=50 ,nullable=false)
-  private String ProjectObjective;
-  @Column (name = "Date_started", length =50, nullable =false)
-  private Date Dated_Started;
-  @Column (name ="Budgeted_resources",length = 50,nullable=false)
-  private int ProjectBudgetedResources;
-  @Column (name ="Project_customer", length= 50,nullable= false)
-  private String ProjectCustomer;
+  @Column(name = "template_name", length = 50, nullable = false)
+  private String templateName;
+  @Column(name = "template_desc", length = 50, nullable = false)
+  private String templateDesc;
+  @Column(name = "template-standard", length = 50, nullable = false)
+  private String standard;
+  @Column(name = "total_per_standard", length = 50, nullable = false)
+  private Double totalPerStandard;
+  @Column(name = "basic_requirements", length = 50, nullable = false)
+  private String basicRequirements;
+  @Column(name = "season", length = 50, nullable = false)
+  private String season;
+  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  private FarmerInput farmerInput;
+
 
 }

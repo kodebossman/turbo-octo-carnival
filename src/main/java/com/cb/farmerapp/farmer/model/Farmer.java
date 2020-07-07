@@ -8,7 +8,6 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-
 @Entity
 @Table(name = "farmers", indexes = {@Index(name = "indx_farmers", columnList = "msisdn", unique = true)})
 @ToString
@@ -16,6 +15,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class Farmer {
+
 
   @Id
   private Long Id;

@@ -1,22 +1,23 @@
 package com.cb.farmerapp.input.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "farmerInput", indexes = {@Index(name = "id", columnList = "id", unique = true)})
 @Getter
 @Setter
 @ToString
-@Table(name = "farmerInput")
-@Entity
+@Access(AccessType.FIELD)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+
 public class FarmerInput {
 
-  @Id
+  @javax.persistence.Id
   private Long Id;
   @Column(name = "input_name", length = 50, nullable = false)
   private String inputName;
