@@ -1,25 +1,21 @@
 package com.cb.farmerapp.farmer.model;
 
+import com.cb.farmerapp.districts.District;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "farmer")
+@Table(name = "farmers", indexes = {@Index(name = "indx_farmers", columnList = "msisdn", unique = true)})
 @ToString
 @Access(AccessType.FIELD)
+@Getter
+@Setter
 public class Farmer {
-
-  public Farmer() {
-
-  }
-
-  public Farmer(String farmerName, String idNo) {
-    this.farmerName = farmerName;
-    this.idNo = idNo;
-  }
 
   @Id
   private Long Id;
@@ -37,56 +33,7 @@ public class Farmer {
   @Temporal(value = TemporalType.TIMESTAMP)
   @JsonFormat(pattern = "MM/dd/yyyy")
   private LocalDate dOB;
+  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  private District district;
 
-//getter
-
-  public String getFarmerName() {
-    return farmerName;
-  }
-
-  public String getMsisdn() {
-    return msisdn;
-  }
-
-  public String getIdNo() {
-    return idNo;
-  }
-
-  public String getLocation() {
-    return location;
-  }
-
-  public String getSpeciality() {
-    return speciality;
-  }
-
-  public LocalDate getdOB() {
-    return dOB;
-  }
-
-//setter
-
-  public void setFarmerName(String farmerName) {
-    this.farmerName = farmerName;
-  }
-
-  public void setMsisdn(String msisdn) {
-    this.msisdn = msisdn;
-  }
-
-  public void setIdNo(String idNo) {
-    this.idNo = idNo;
-  }
-
-  public void setLocation(String location) {
-    this.location = location;
-  }
-
-  public void setSpeciality(String speciality) {
-    this.speciality = speciality;
-  }
-
-  public void setdOB(LocalDate dOB) {
-    this.dOB = dOB;
-  }
 }
