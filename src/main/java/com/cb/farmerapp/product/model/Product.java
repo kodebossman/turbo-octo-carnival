@@ -21,11 +21,11 @@ public class Product {
   @Column(name = "product_name", length = 50, nullable = false)
   private String productName;
   @Column(name = "product_Id", length = 50, nullable = false)
-  private String serialNumber;
+  private String serialNo;
   @Column(name = "season", length = 50, nullable = false)
   private String season;
-  @Column(name = "desc", length = 100, nullable = false)
-  private String desc;
+  @Column(name = "color", length = 100, nullable = false)
+  private String color;
   @Column(name = "status", length = 50, nullable = false)
   private String status;
   @ManyToOne(fetch = FetchType.LAZY, optional = false)
