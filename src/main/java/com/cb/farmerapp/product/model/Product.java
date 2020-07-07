@@ -13,7 +13,7 @@ public class Product {
         private String serialNo;
         private String season;
         private String color;
-        private String customer;
+        private String status;
 
 
         public String getProductName() {
@@ -33,7 +33,7 @@ public class Product {
         }
 
         public String getCustomer() {
-            return customer;
+            return status;
         }
 
         public void setSerialNo(String serialNo) {
@@ -53,7 +53,7 @@ public class Product {
         }
 
         public void setCustomer(String customer) {
-            this.customer = customer;
+            this.status = customer;
         }
     }
 
